@@ -1,0 +1,34 @@
+@baseUrl =  http://localhost:3333
+
+# @name create_user
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "name": "Jane Doe",
+  "email": "JaneDoe@acme.com",
+  "password": "12345678"
+}
+
+###
+
+# @name list_users
+GET {{baseUrl}}/users
+
+###
+
+# @name create_post
+POST {{baseUrl}}/posts
+Content-Type: application/json
+
+{
+  "title": "Vasco",
+  "content": "Clube de regatas Vasco da Gama aka CRVG",
+  "published": true,
+  "authorId": "cb8abb78-b598-4c1a-8635-2f64a5ea062b"
+}
+
+###
+
+# @name list_posts
+GET {{baseUrl}}/posts
