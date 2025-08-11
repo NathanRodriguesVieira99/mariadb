@@ -1,0 +1,21 @@
+version: "3.9"
+
+services: # mariadb para prod
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb_estudos_prod
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE:
+      MYSQL_USER:
+      MYSQL_PASSWORD:
+    ports:
+      - ${MYSQL_PORT}:${MYSQL_PORT}
+    volumes:
+      - mariadb_prod_data:/var/lib/mysql
+
+volumes:
+  mariadb_prod_data:
