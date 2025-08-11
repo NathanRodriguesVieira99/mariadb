@@ -13,22 +13,5 @@ services: # mariadb para dev
     volumes:
       - mariadb_data:/var/lib/mysql
 
-#  mariadb: # mariadb para prod
-#      image: mariadb:latest
-#      container_name: mariadb_estudos
-#      restart: unless-stopped
-#     environment: 
-#        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-#        MYSQL_DATABASE: ${MYSQL_DATABASE}
-#        MYSQL_USER: ${MYSQL_USER}   
-#        MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-#      ports:
-#         - "${MYSQL_PORT}:3306"
-#    volumes:
-#       - mariadb_data:/var/lib/mysql
-
 volumes:
   mariadb_data:
-
-
-
